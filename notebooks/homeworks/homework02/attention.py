@@ -103,7 +103,7 @@ class Decoder(nn.Module):
         )
 
         self.rnn = nn.GRU(
-            imput_size=(hid_dim * 2) + emb_dim,
+            input_size=(hid_dim * 2) + emb_dim,
             hidden_size=hid_dim
         )
 

@@ -28,7 +28,7 @@ class Encoder(nn.Module):
         )
 
         self.rnn = nn.GRU(
-            imput_size=emb_dim,
+            input_size=emb_dim,
             hidden_size=hid_dim,
             bidirectional=True
         )

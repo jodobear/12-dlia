@@ -28,8 +28,8 @@ class Encoder(nn.Module):
         )
 
         self.rnn = nn.GRU(
-            input_size=emb_dim,
-            hidden_size=hid_dim,
+            emb_dim,
+            hid_dim,
             bidirectional=True
         )
 
@@ -103,8 +103,8 @@ class Decoder(nn.Module):
         )
 
         self.rnn = nn.GRU(
-            input_size=(hid_dim * 2) + emb_dim,
-            hidden_size=hid_dim
+            (hid_dim * 2) + emb_dim,
+            hid_dim
         )
 
         self.out = nn.Linear(
